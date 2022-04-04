@@ -3,10 +3,10 @@ package main
 import (
 	"crypto/rand"
 	"github.com/faiface/pixel"
-	"github.com/faiface/pixel-examples/community/maze/stack"
 	"github.com/faiface/pixel/imdraw"
 	"github.com/faiface/pixel/pixelgl"
 	"golang.org/x/image/colornames"
+	"main/Stack"
 	"math/big"
 )
 
@@ -80,7 +80,7 @@ func newCell(row int, col int) *cell {
 
 // generates a maze using the same algorithm as maze-generator.
 func generateMaze(cols int, rows int) [][]*cell {
-	trace := stack.NewStack(cols * rows) // backtracing stack
+	trace := Stack.NewStack(cols * rows) // backtracing stack
 	var grid = make([][]*cell, cols)     // holds cell references
 	for i := range grid {
 		grid[i] = make([]*cell, rows)

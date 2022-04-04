@@ -1,4 +1,4 @@
-module github.com/faiface/pixel-examples
+module main
 
 go 1.16
 
